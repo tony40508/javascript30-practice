@@ -22,7 +22,7 @@ function setDate() {
     if (secondsDegrees === 90) {
         allHands.forEach(hand => hand.style.transition = 'none') // remove the all 0.05s transition
     } else {
-        allHands.forEach(hand => hand.style.transition = '')
+        allHands.forEach(hand => hand.style.transition = '') // using '' removes the inline style and reverts back to the stylesheet
     }
 }
 setInterval(setDate, 1000);
