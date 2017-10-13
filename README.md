@@ -3,8 +3,8 @@
 >
 > ***template engine:*** [pug](https://github.com/pugjs/pug)<br>
 > ***css preprocessor:*** [sass](https://github.com/sass/sass)
-## [01 JavaScript Drum Kit](https://tony40508.github.io/javascript30-practice/01-JavaScript%20Drum%20Kit/)
-## [02 JS and CSS Clock](https://tony40508.github.io/javascript30-practice/02%20JS%20and%20CSS%20Clock/)
+* [01 JavaScript Drum Kit](https://tony40508.github.io/javascript30-practice/01-JavaScript%20Drum%20Kit/)<br>
+* [02 JS and CSS Clock](https://tony40508.github.io/javascript30-practice/02%20JS%20and%20CSS%20Clock/)
 
 ## :ideograph_advantage: Reference
 [wesbos/JavaScript30](https://github.com/wesbos/JavaScript30)<br>
