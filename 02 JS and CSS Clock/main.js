@@ -14,9 +14,8 @@ function setDate() {
     const minsDegrees = ((minutes / 60) * 360) + 90;
     minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
-    const hour = now.getHours();
+    const hour = now.getHours()
     const hourDegrees = ((hour / 12) * 360) + ((minutes / 60) * 30) + 90;
-    // console.log(hourDegrees);
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
     
     // 讓秒針角度歸零時，不會抖一下

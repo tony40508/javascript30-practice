@@ -47,7 +47,7 @@ html .hand {
 }
 
 html .hour_hand {
-  transform: scale(0.8) !important;
+  transform: scale(0.8);
 }
 
 html .second_hand {
