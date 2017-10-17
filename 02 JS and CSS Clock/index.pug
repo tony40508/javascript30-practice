@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title JS + CSS Clock
+    link(rel="stylesheet", href="style.css")
+  body
+    .clock#new_clock
+      .clock_face
+        .clock_ticks
+          - for (var tick = 1; tick <= 60; tick++)
+            span.clock_tick
+        .hand.hour_hand
+        .hand.minute_hand
+        .hand.second_hand
+
+script(type="text/javascript", src="./main.js")

@@ -1,0 +1,78 @@
+$clockSize: 300px
+
+body
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100vh
+  background: url(https://picsum.photos/1500/1000/?random)
+  
+.clock_face 
+  position: relative
+  width: $clockSize
+  height: $clockSize
+  background-color: transparent
+  border: 10px solid black
+  border-radius: 100%
+  transform: rotate(180deg)
+  // inset 參數讓顯示在區塊外的陰影效果，變成是內陰影的效果
+  box-shadow: 0 0 0 4px rgba(0,0,0,0.1), inset 0 0 0 3px #EFEFEF, inset 0 0 10px black, 0 0 10px rgba(0,0,0,0.2)
+  &:before
+    content: ''
+    position: absolute
+    width: 15px
+    height: 15px
+    border: 3px solid white
+    background-color: black
+    border-radius: 100%
+    z-index: 3
+    //置中
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+  
+.hand 
+  position: absolute
+  top: 0 
+  bottom: 0 
+  left: 50%
+  margin: auto
+  height: 8px
+  background-color: black
+  transform-origin: 0 //設定物件變形的起始點，中心點並不再物件的中心
+  transition: transform cubic-bezier(0.1, 2.5, 0.5, 1) // 貝玆函數: 是自訂變化曲線函數
+  
+
+  
+.hour_hand
+  width: calc(50% - #{$clockSize} / 5)
+.minute_hand
+  width: calc(50% - #{$clockSize} / 8)
+.second_hand
+  width: calc(50% - #{$clockSize} / 12)
+  height: 4px
+  background-color: red
+
+.clock_tick 
+  display: block
+  position: absolute
+  top: 10px 
+  left: 50%
+  width: 2px
+  height: 8px
+  background-color: lightgrey
+  transform-origin: 0 $clockSize / 2 - 10px
+  transform: translateX(-50%)
+  
+  &:nth-child(5n + 1) 
+    width: 4px
+    height: 16px
+    background-color: black
+
+  @for $i from 1 through 60
+    &:nth-child(#{$i})
+      transform: rotate(#{($i * 6) - 6}deg) translateX(-50%)
+
+ 
